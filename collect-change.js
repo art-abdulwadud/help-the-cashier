@@ -32,6 +32,7 @@ notesArray.forEach(note => {
 		noteItem.setAttribute('class',"list-group-item");
 		noteItem.setAttribute('data-aos', "flip-right");
 		noteItem.setAttribute('data-aos-duration', "1000");
+		noteItem.setAttribute('data-aos-once', "true");
 		notes > 0 ? noteItem.innerHTML = "Ksh " + note + " notes: " + notes: 0;	
 		if(notes > 0){
 			notesWrapper.appendChild(noteItem)
@@ -42,8 +43,6 @@ notesArray.forEach(note => {
 				changeAmount = changeAmount%coin;
 				let coinItem = document.createElement('li');
 				coinItem.setAttribute('class',"list-group-item");
-				coinItem.setAttribute('data-aos', "fade-up");
-				coinItem.setAttribute('data-aos-duration', "1000");
 				coins > 0 ? coinItem.innerHTML = "Ksh " + coin + " coins: " + coins: 0;
 				if(coins > 0){
 					coinsWrapper.appendChild(coinItem)
