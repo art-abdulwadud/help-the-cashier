@@ -6,7 +6,11 @@ body{
 .list-wrapper{
 	display: none;
 }
-.list-item{
-	list-style: none;
-	margin-bottom: 10px;
+.btnlink{
+	color: white;
+	font-size: calc(110% + 1vh);
+	text-decoration: none;
+}
+.btnlink:hover{
+	text-decoration: none;
 }

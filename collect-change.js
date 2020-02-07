@@ -28,17 +28,21 @@ notesArray.forEach(note => {
 		let notes = Math.floor(changeAmount/note);
 		changeAmount = changeAmount%note;
 		let noteItem = document.createElement('li');
-		noteItem.setAttribute('class',"list-item");
+		noteItem.setAttribute('class',"list-group-item");
 		notes > 0 ? noteItem.innerHTML = "Ksh " + note + " notes: " + notes: 0;	
-		notesWrapper.appendChild(noteItem)
+		if(notes > 0){
+			notesWrapper.appendChild(noteItem)
+		}
 		if(changeAmount < 50){
 			coinsArray.forEach(coin => {
 				let coins = Math.floor(changeAmount/coin);
 				changeAmount = changeAmount%coin;
 				let coinItem = document.createElement('li');
-				coinItem.setAttribute('class',"list-item");
+				coinItem.setAttribute('class',"list-group-item");
 				coins > 0 ? coinItem.innerHTML = "Ksh " + coin + " coins: " + coins: 0;
-				coinsWrapper.appendChild(coinItem)
+				if(coins > 0){
+					coinsWrapper.appendChild(coinItem)
+				}
 			});
 		}
 	}
