@@ -12,5 +12,6 @@ body{
 	text-decoration: none;
 }
 .btnlink:hover{
+	color: white;
 	text-decoration: none;
 }

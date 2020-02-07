@@ -20,15 +20,18 @@ amountDueDom.innerText = "Amount Due: KSh. " + amountDue;
 amountPaidDom.innerText = "Amount Paid: KSh. " + amountPaid;
 changeAmountDom.innerText = "Change: KSh. " + changeAmount;
 listWrapper.style.display = 'block';
-
+// Arrays for storing our notes and coins
 let notesArray = [1000, 500, 200, 100, 50];
 let coinsArray = [20, 10, 5, 1];
+// Looping through the arrays
 notesArray.forEach(note => {
 	if(changeAmount > 0){
 		let notes = Math.floor(changeAmount/note);
 		changeAmount = changeAmount%note;
 		let noteItem = document.createElement('li');
 		noteItem.setAttribute('class',"list-group-item");
+		noteItem.setAttribute('data-aos', "flip-right");
+		noteItem.setAttribute('data-aos-duration', "1000");
 		notes > 0 ? noteItem.innerHTML = "Ksh " + note + " notes: " + notes: 0;	
 		if(notes > 0){
 			notesWrapper.appendChild(noteItem)
@@ -39,6 +42,8 @@ notesArray.forEach(note => {
 				changeAmount = changeAmount%coin;
 				let coinItem = document.createElement('li');
 				coinItem.setAttribute('class',"list-group-item");
+				coinItem.setAttribute('data-aos', "fade-up");
+				coinItem.setAttribute('data-aos-duration', "1000");
 				coins > 0 ? coinItem.innerHTML = "Ksh " + coin + " coins: " + coins: 0;
 				if(coins > 0){
 					coinsWrapper.appendChild(coinItem)
