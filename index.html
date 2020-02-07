@@ -14,12 +14,12 @@
 </head>
 <body>
     <section>
-        <div class="container-fluid">
-            <h1 class="display-3">Help the cashier</h1>
+        <h1 class="display-3">Help the cashier</h1>
+        <div class="container-fluid list-wrapper">
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Amount Due: KSh. <span class="amount-due"></span></li>
-                <li class="list-group-item">Amount Paid: KSh. <span class="amount-paid"></span></li>
-                <li class="list-group-item">Balance: KSh. <span class="change-amount"></span></li>
+                <li class="list-group-item amount-due"></li>
+                <li class="list-group-item amount-paid"></li>
+                <li class="list-group-item change-amount"></li>
             </ul>
         </div>
     </section>
@@ -30,6 +30,7 @@
       AOS.init();
     </script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="collect-change.js"></script>
     <script src="jquery/jquery-3.3.1.slim.min.js"></script>
     <script src="popper/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
