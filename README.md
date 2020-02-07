@@ -6,6 +6,8 @@
 
 ## Instructions
 
+App link => https://art-abdulwadud.github.io/help-the-cashier/
+
 Enter the amount the customer is suppose to pay. (Amount Due)
 
 Enter the amount the customer actually pays. (Amount Paid)
