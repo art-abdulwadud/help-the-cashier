@@ -83,7 +83,7 @@ Things to consider:
 3)Assign the number of a note to an `li` element, created with `document.createElement('li')`, as its value
 4)To assing it a classname, use `setAttribute('class', 'any-classname')` function
 5)Add AOS to it(Optional). e.g `setAttribute('data-aos', 'fade-left')`
-6)Only create elements when the number of a note, saved in the notes variable, is greater than zero to avoid creating blank elements
+6)Only create elements when the number of a note, saved in the notes variable, is greater than zero to avoid creating blank elements. 
 7)Whenever our changeAmount has a value less than 50, we'll instead loop through the coinsArray and do the same for each of it's items.
 
 ```
@@ -94,7 +94,6 @@ notesArray.forEach(note => {
 		changeAmount = changeAmount%note;
 		let noteItem = document.createElement('li');
   		noteItem.setAttribute('class',"list-group-item");
-  // 
   		noteItem.setAttribute('data-aos', "flip-right");
 		noteItem.setAttribute('data-aos-duration', "1000");
 		noteItem.setAttribute('data-aos-once', "true");
@@ -103,7 +102,6 @@ notesArray.forEach(note => {
 			notesWrapper.appendChild(noteItem)
   		}
   		if(changeAmount < 50){
-	// 
 		coinsArray.forEach(coin => {
 		let coins = Math.floor(changeAmount/coin);
 		changeAmount = changeAmount%coin;
