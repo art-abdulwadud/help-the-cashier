@@ -39,8 +39,21 @@ console.log(username);
 // returns
 Whatever was entered by the user when prompted
 ```
-
+For this project:
+```
+let amountDue = prompt('Amount due:');
+let amountPaid = prompt('Amount being paid:');
+```
 Note: parseInt() or parseFloat are used for inputs when you are specifically dealing with numbers because whatever entered when prompted is saved to the variable as a string.
+```
+amountDue = parseInt(amountDue)
+amountPaid = parseInt(amountPaid)
+```
+And finally, to calculate the change/balance
+```
+let changeAmount;
+amountPaid >= amountDue ? changeAmount = amountPaid - amountDue: changeAmount = amountPaid - amountDue;
+```
 ## DOM manipulation
 With DOM manupulation, we can change the style of an element, add elements, remove elements, add classnames and IDs to and element/s or remove them or replace them and lots more, all with JavaScript.
 For this project, this are the used DOM manipulation tricks
@@ -64,6 +77,27 @@ const notesArray = [1000, 500, 200, 100, 50];
 const coinsArray = [20, 10, 5, 1];
 ```
 `forEach()`loops have been used for looping through the items in the `notesArray` and `coinsArray`.
+```
+// This is like saying, for every note in my notesArray, meaning for each item in that array, do this...
+notesArray.forEach(note => {
+	if(changeAmount > 0){
+  // calculating how many of this note are in 'changeAmount'
+		let notes = Math.floor(changeAmount/note);
+  // if there any, save the remainder in '
+		changeAmount = changeAmount%note;
+  // create a new element
+		let noteItem = document.createElement('li');
+  // Give it a classname
+  noteItem.setAttribute('class',"list-group-item");
+  // Add AOS to it
+  noteItem.setAttribute('data-aos', "flip-right");
+		noteItem.setAttribute('data-aos-duration', "1000");
+		noteItem.setAttribute('data-aos-once', "true");
+  // Confirming the number each note. 
+  // Assign the number each note to a newly created 'li' element only if the 'notes' variable is more than 0.
+  notes > 0 ? noteItem.innerHTML = "Ksh " + note + " notes: " + notes: 0;
+})
+```
 ## AOS
 AOS, which stands for animate on scroll,is an awesome feature created by Michalsnik(https://github.com/michalsnik). You can find AOS and how it works at https://github.com/michalsnik/aos. Check out what it can do at https://michalsnik.github.io/aos/
 
