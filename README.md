@@ -3,8 +3,15 @@
 This is a demontration of DOM manipulation for beginners.
 
 ## Table of Contents
-
+* [Selecting DOM elements](#Selecting DOM elements)
+* [Using Prompts for user input](#Using Prompts for user input)
+* [DOM manipulation](#DOM manipulation)
+* [Looping through arrays](#Looping through arrays)
+* [AOS](#AOS)
 * [Instructions](#instructions)
+
+## AOS
+AOS, which stands for animate on scroll,is an awesome feature created by Michalsnik(https://github.com/michalsnik). You can find AOS and how it works at https://github.com/michalsnik/aos. Check out what it can do at https://michalsnik.github.io/aos/
 
 ## Instructions
 
