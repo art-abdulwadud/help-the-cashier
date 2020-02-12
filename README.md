@@ -78,7 +78,7 @@ const coinsArray = [20, 10, 5, 1];
 ```
 `forEach()`loops have been used for looping through the items in the `notesArray` and `coinsArray`.
 ```
-// This is like saying, for every note in my notesArray, meaning for each item in that array, do this...
+`This is like saying, for every note in my notesArray, meaning for each item in that array, do this...`
 notesArray.forEach(note => {
 // Confirm if change/balance is more than 0
 	if(changeAmount > 0){
