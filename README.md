@@ -53,6 +53,17 @@ document.querySelector('div').setAttribute('class', 'my-class'); // For adding a
 let x = document.createElement('p')
 document.querySelector('div').appendChild(x); 
 ```
+## Looping through arrays
+Two arrays were created. One for storing notes and the other for storing coins. We want to loop through them so that we can assign a note or a coin (if any) to an element as it's value and create only elements with a value. For this, we'll select an unordered list `ul` and within it, using the loop, we'll create `li` tags.
+```
+<ul></ul>
+```
+```
+const list = document.querySelector('ul')
+const notesArray = [1000, 500, 200, 100, 50];
+const coinsArray = [20, 10, 5, 1];
+```
+`forEach()`loops have been used for looping through the items in the `notesArray` and `coinsArray`.
 ## AOS
 AOS, which stands for animate on scroll,is an awesome feature created by Michalsnik(https://github.com/michalsnik). You can find AOS and how it works at https://github.com/michalsnik/aos. Check out what it can do at https://michalsnik.github.io/aos/
 
