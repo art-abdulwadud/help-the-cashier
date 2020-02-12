@@ -51,15 +51,15 @@ amountPaid = parseInt(amountPaid)
 ```
 And finally, to calculate the change/balance
 ```
-let changeAmount;
-amountPaid >= amountDue ? changeAmount = amountPaid - amountDue: changeAmount = amountPaid - amountDue;
+let changeAmount = amountPaid - amountDue;
+// If the amount paid by the customer is less than the amount that they are suppose to pay, then give an alert
+changeAmount <= 0 ? alert("Please make sure Amount paid is not less than Amount due"): 0;
 ```
 ## DOM manipulation
 With DOM manupulation, we can change the style of an element, add elements, remove elements, add classnames and IDs to and element/s or remove them or replace them and lots more, all with JavaScript.
-For this project, this are the used DOM manipulation tricks
 ```
 document.querySelector('div').innerText = "Hello world"; // For adding text
-document.querySelector('div').style.display = "block"; // For changing display
+document.querySelector('div').style.display = "block"; // For changing style
 document.querySelector('div').createElement('li'); // For adding HTML elements
 document.querySelector('div').setAttribute('class', 'my-class'); // For adding attributes(classname, id etc)
 // And for selecting where to add an element
@@ -80,6 +80,7 @@ const coinsArray = [20, 10, 5, 1];
 ```
 // This is like saying, for every note in my notesArray, meaning for each item in that array, do this...
 notesArray.forEach(note => {
+// Confirm if change/balance is more than 0
 	if(changeAmount > 0){
   // calculating how many of this note are in 'changeAmount'
 		let notes = Math.floor(changeAmount/note);
@@ -88,14 +89,31 @@ notesArray.forEach(note => {
   // create a new element
 		let noteItem = document.createElement('li');
   // Give it a classname
-  noteItem.setAttribute('class',"list-group-item");
+  		noteItem.setAttribute('class',"list-group-item");
   // Add AOS to it
-  noteItem.setAttribute('data-aos', "flip-right");
+  		noteItem.setAttribute('data-aos', "flip-right");
 		noteItem.setAttribute('data-aos-duration', "1000");
 		noteItem.setAttribute('data-aos-once', "true");
   // Confirming the number each note. 
-  // Assign the number each note to a newly created 'li' element only if the 'notes' variable is more than 0.
-  notes > 0 ? noteItem.innerHTML = "Ksh " + note + " notes: " + notes: 0;
+  // Assign the number of a note to a newly created li element as its value if the number of that note is greater than zero
+  		notes > 0 ? noteItem.innerHTML = "Ksh " + note + " notes: " + notes: 0;
+  		if(notes > 0){
+  	// only creating elements when the number of a note is greater than zero
+			notesWrapper.appendChild(noteItem)
+  		}
+  		if(changeAmount < 50){
+	// Whenever our changeAmount has a value less than 50, we'll instead loop through the coinsArray and do the same
+		coinsArray.forEach(coin => {
+		let coins = Math.floor(changeAmount/coin);
+		changeAmount = changeAmount%coin;
+		let coinItem = document.createElement('li');
+		coinItem.setAttribute('class',"list-group-item");
+		coins > 0 ? coinItem.innerHTML = "Ksh " + coin + " coins: " + coins: 0;
+		if(coins > 0){
+			coinsWrapper.appendChild(coinItem)
+		}
+		});
+	}
 })
 ```
 ## AOS
