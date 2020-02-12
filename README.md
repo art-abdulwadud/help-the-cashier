@@ -41,7 +41,18 @@ Whatever was entered by the user when prompted
 ```
 
 Note: parseInt() or parseFloat are used for inputs when you are specifically dealing with numbers because whatever entered when prompted is saved to the variable as a string.
-
+## DOM manipulation
+With DOM manupulation, we can change the style of an element, add elements, remove elements, add classnames and IDs to and element/s or remove them or replace them and lots more, all with JavaScript.
+For this project, this are the used DOM manipulation tricks
+```
+document.querySelector('div').innerText = "Hello world"; // For adding text
+document.querySelector('div').style.display = "block"; // For changing display
+document.querySelector('div').createElement('li'); // For adding HTML elements
+document.querySelector('div').setAttribute('class', 'my-class'); // For adding attributes(classname, id etc)
+// And for selecting where to add an element
+let x = document.createElement('p')
+document.querySelector('div').appendChild(x); 
+```
 ## AOS
 AOS, which stands for animate on scroll,is an awesome feature created by Michalsnik(https://github.com/michalsnik). You can find AOS and how it works at https://github.com/michalsnik/aos. Check out what it can do at https://michalsnik.github.io/aos/
 
