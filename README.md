@@ -1,5 +1,7 @@
 # Help the cashier
 
+This is a demontration of DOM manipulation for beginners.
+
 ## Table of Contents
 
 * [Instructions](#instructions)
