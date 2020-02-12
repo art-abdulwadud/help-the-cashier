@@ -10,6 +10,27 @@ This is a demontration of DOM manipulation for beginners.
 * [AOS](#AOS)
 * [Instructions](#instructions)
 
+## Selecting DOM elements
+There are a couple of ways for selecting DOM elements in JavaScript. For this project, `document.querySelector()` which is used for a single element and `document.querySelectorAll()` which is used for a group of elements, are used for selecting DOM elements. Although, `document.getElementsByClassName()` and `document.getElementById()` can also be used.
+Let's assume we have this:
+```
+<span class="small-text"></span>
+ <h1 id="title"></h1>
+ <p>
+```
+For selecting DOM elements with no classname and id
+```
+document.querySelector('p')
+```
+For selecting the element with the classname `small-text`
+```
+document.querySelector('.small-text')
+```
+For selecting the element with the id `title`
+```
+document.querySelector('#title')
+```
+
 ## AOS
 AOS, which stands for animate on scroll,is an awesome feature created by Michalsnik(https://github.com/michalsnik). You can find AOS and how it works at https://github.com/michalsnik/aos. Check out what it can do at https://michalsnik.github.io/aos/
 
@@ -21,4 +42,4 @@ Enter the amount the customer is suppose to pay. (Amount Due)
 
 Enter the amount the customer actually pays. (Amount Paid)
 
-The Balance is calculated and then broken down into notes and coins. The cashier is told exactly how many coins and notes are needed depending on the change/balance the customer is expecting / is suppose to be given.
+The Balance is calculated and then broken down into notes and coins. The cashier is told exactly how many coins and notes are needed depending on the change/balance the customer is suppose to be given.
