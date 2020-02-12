@@ -78,13 +78,13 @@ const coinsArray = [20, 10, 5, 1];
 ```
 `forEach()`loops have been used for looping through the items in the `notesArray` and `coinsArray`. This is like saying, for every note in my notesArray or coin in the coinsArray, meaning for each item in that array, do this...
 Things to consider:
-1)Confirm if change/balance is more than 0
-2)Calculating how many of this note are in 'changeAmount' and if any, save the remainder in to the changeAmount variable
-3)Assign the number of a note to an `li` element, created with `document.createElement('li')`, as its value
-4)To assing it a classname, use `setAttribute('class', 'any-classname')` function
-5)Add AOS to it(Optional). e.g `setAttribute('data-aos', 'fade-left')`
-6)Only create elements when the number of a note, saved in the notes variable, is greater than zero to avoid creating blank elements. 
-7)Whenever our changeAmount has a value less than 50, we'll instead loop through the coinsArray and do the same for each of it's items.
+(1)Confirm if change/balance is more than 0
+(2)Calculating how many of this note are in 'changeAmount' and if any, save the remainder in to the changeAmount variable
+(3)Assign the number of a note to an `li` element, created with `document.createElement('li')`, as its value
+(4)To assing it a classname, use `setAttribute('class', 'any-classname')` function
+(5)Add AOS to it(Optional). e.g `setAttribute('data-aos', 'fade-left')`
+(6)Only create elements when the number of a note, saved in the notes variable, is greater than zero to avoid creating blank elements. 
+(7)Whenever our changeAmount has a value less than 50, we'll instead loop through the coinsArray and do the same for each of it's items.
 
 ```
 
