@@ -4,7 +4,7 @@ This is a demontration of DOM manipulation for beginners.
 
 ## Table of Contents
 * [Selecting DOM elements](#Selecting DOM elements)
-* [Using-prompts-for-user-input](#Using Prompts for user input)
+* [Using Prompts for user input](#Using-prompts-for-user-input)
 * [DOM manipulation](#DOM manipulation)
 * [Looping through arrays](#Looping through arrays)
 * [AOS](#AOS)
