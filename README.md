@@ -30,7 +30,18 @@ For selecting the element with the id `title`
 ```
 document.querySelector('#title')
 ```
-
+## Using Prompts for user input
+In order to get input from the user, we can create prompts and save them in a varible.
+e.g
+```
+let username = prompt("Enter username: ")
+console.log(username);
+// returns
+Whatever was entered by the user when prompted
+```
+```
+Note: parseInt() or parseFloat are used for inputs when you are specifically dealing with numbers because whatever entered when prompted is saved to the variable as a string.
+```
 ## AOS
 AOS, which stands for animate on scroll,is an awesome feature created by Michalsnik(https://github.com/michalsnik). You can find AOS and how it works at https://github.com/michalsnik/aos. Check out what it can do at https://michalsnik.github.io/aos/
 
