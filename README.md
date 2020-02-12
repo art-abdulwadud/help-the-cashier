@@ -76,33 +76,34 @@ const list = document.querySelector('ul')
 const notesArray = [1000, 500, 200, 100, 50];
 const coinsArray = [20, 10, 5, 1];
 ```
-`forEach()`loops have been used for looping through the items in the `notesArray` and `coinsArray`.
+`forEach()`loops have been used for looping through the items in the `notesArray` and `coinsArray`. This is like saying, for every note in my notesArray or coin in the coinsArray, meaning for each item in that array, do this...
+Things to consider:
+1)Confirm if change/balance is more than 0
+2)Calculating how many of this note are in 'changeAmount' and if any, save the remainder in to the changeAmount variable
+3)Assign the number of a note to an `li` element, created with `document.createElement('li')`, as its value
+4)To assing it a classname, use `setAttribute('class', 'any-classname')` function
+5)Add AOS to it(Optional). e.g `setAttribute('data-aos', 'fade-left')`
+6)Only create elements when the number of a note, saved in the notes variable, is greater than zero to avoid creating blank elements
+7)Whenever our changeAmount has a value less than 50, we'll instead loop through the coinsArray and do the same for each of it's items.
+
 ```
-`This is like saying, for every note in my notesArray, meaning for each item in that array, do this...`
+
 notesArray.forEach(note => {
-// Confirm if change/balance is more than 0
 	if(changeAmount > 0){
-  // calculating how many of this note are in 'changeAmount'
 		let notes = Math.floor(changeAmount/note);
-  // if there any, save the remainder in '
 		changeAmount = changeAmount%note;
-  // create a new element
 		let noteItem = document.createElement('li');
-  // Give it a classname
   		noteItem.setAttribute('class',"list-group-item");
-  // Add AOS to it
+  // 
   		noteItem.setAttribute('data-aos', "flip-right");
 		noteItem.setAttribute('data-aos-duration', "1000");
 		noteItem.setAttribute('data-aos-once', "true");
-  // Confirming the number each note. 
-  // Assign the number of a note to a newly created li element as its value if the number of that note is greater than zero
-  		notes > 0 ? noteItem.innerHTML = "Ksh " + note + " notes: " + notes: 0;
+  		noteItem.innerHTML = "Ksh " + note + " notes: " + notes;
   		if(notes > 0){
-  	// only creating elements when the number of a note is greater than zero
 			notesWrapper.appendChild(noteItem)
   		}
   		if(changeAmount < 50){
-	// Whenever our changeAmount has a value less than 50, we'll instead loop through the coinsArray and do the same
+	// 
 		coinsArray.forEach(coin => {
 		let coins = Math.floor(changeAmount/coin);
 		changeAmount = changeAmount%coin;
