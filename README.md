@@ -22,11 +22,11 @@ For selecting DOM elements with no classname and id
 ```
 document.querySelector('p')
 ```
-For selecting the element with the classname `small-text`
+For selecting an element with a classname e.g `small-text`
 ```
 document.querySelector('.small-text')
 ```
-For selecting the element with the id `title`
+For selecting an element with an id e.g `title`
 ```
 document.querySelector('#title')
 ```
