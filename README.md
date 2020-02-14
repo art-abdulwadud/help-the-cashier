@@ -44,7 +44,7 @@ For this project:
 let amountDue = prompt('Amount due:');
 let amountPaid = prompt('Amount being paid:');
 ```
-Note: parseInt() or parseFloat are used for inputs when you are specifically dealing with numbers because whatever entered when prompted is saved to the variable as a string.
+Note: `parseInt()` and `parseFloat()` are used for inputs when you are specifically dealing with numbers because whatever entered when prompted is saved to the variable as a string.
 ```
 amountDue = parseInt(amountDue)
 amountPaid = parseInt(amountPaid)
