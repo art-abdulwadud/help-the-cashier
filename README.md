@@ -58,10 +58,10 @@ changeAmount <= 0 ? alert("Please make sure Amount paid is not less than Amount 
 ## DOM manipulation
 With DOM manupulation, we can change the style of an element, add elements, remove elements, add classnames and IDs to and element/s or remove them or replace them and lots more, all with JavaScript.
 ```
-document.querySelector('div').innerText = "Hello world"; // For adding text
-document.querySelector('div').style.display = "block"; // For changing style
-document.querySelector('div').createElement('li'); // For adding HTML elements
-document.querySelector('div').setAttribute('class', 'my-class'); // For adding attributes(classname, id etc)
+document.innerText = "Hello world"; // For adding text
+document.style.display = "block"; // For changing style
+document.createElement('li'); // For adding HTML elements
+document.setAttribute('class', 'my-class'); // For adding attributes(classname, id etc)
 // And for selecting where to add an element
 let x = document.createElement('p')
 document.querySelector('div').appendChild(x); 
