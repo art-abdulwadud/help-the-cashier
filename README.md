@@ -57,14 +57,22 @@ changeAmount <= 0 ? alert("Please make sure Amount paid is not less than Amount 
 ```
 ## DOM manipulation
 With DOM manupulation, we can change the style of an element, add elements, remove elements, add classnames and IDs to and element/s or remove them or replace them and lots more, all with JavaScript.
+Let's assume we have selected this DOM element:
+HTML
 ```
-document.innerText = "Hello world"; // For adding text
-document.style.display = "block"; // For changing style
-document.createElement('li'); // For adding HTML elements
-document.setAttribute('class', 'my-class'); // For adding attributes(classname, id etc)
+<div id="my-container" class="contaner"></div>
+```
+JavaScript
+```
+let myContainer = document.querySelecter('div') or document.querySelecter('#my-container') or document.querySelecter('.container') 
+
+myContainer.innerText = "Hello world"; // For adding text
+myContainer.style.display = "block"; // For changing style
+myContainer.createElement('li'); // For adding HTML elements
+myContainer.setAttribute('class', 'my-class'); // For adding or replacing attributes(classname, id etc)
 // And for selecting where to add an element
 let x = document.createElement('p')
-document.querySelector('div').appendChild(x); 
+myContainer.appendChild(x); 
 ```
 ## Looping through arrays
 Two arrays were created. One for storing notes and the other for storing coins. We want to loop through them so that we can assign a note or a coin (if any) to an element as it's value and create only elements with a value. For this, we'll select an unordered list `ul` and within it, using the loop, we'll create `li` tags.
